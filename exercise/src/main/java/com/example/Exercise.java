@@ -2,8 +2,6 @@ package com.example;
 
 import com.example.exUtil.NewExercise;
 import com.example.exUtil.Workout.Workout;
-
-
 import java.util.Scanner;
 
 public class Exercise {
@@ -51,13 +49,23 @@ public class Exercise {
         System.out.println();
     }
 
+    public static void displayCaloriesMenu(){
+        System.out.println();
+        System.out.println("Please Choose One of the Following:");
+        System.out.println("1: View Workout");
+        System.out.println("2: Create Profile");
+        System.out.println("3: Back");
+        System.out.println();
+    }
+
     public static void main(String[] args){
 
         Scanner inputDevice = new Scanner(System.in);
 
-        // instance of object
+        // instance of objects
         NewExercise myExercise = new NewExercise();
         Workout newWorkout = new Workout();
+        Calories newCalories = new Calories();
 
        // variables for return from methods
         String name = "";
@@ -67,6 +75,7 @@ public class Exercise {
         int topMenuChoice = 0;
         int workoutMenuChoice = 0;
         int whichWorkout = 0;
+        int calChoice = 0;
         //int exerciseMenuChoice = 0;
 
 
@@ -141,8 +150,38 @@ public class Exercise {
 
                 // this is going to be for the calorie counter
                 case 3:
-                    System.out.println("Nothing is here yet....");
+                    double caloriesBurned = 0;
+                   while(calChoice != 3) {
+                       displayCaloriesMenu();
+                       calChoice = inputDevice.nextInt();
+
+
+                       // switch to determine calorie choice
+                       switch (calChoice) {
+                           case 1:
+                               newCalories.displayCalories(caloriesBurned);
+                               break;
+
+                           case 2:
+                               newCalories.getGender();
+                               newCalories.getAge();
+                               newCalories.getWeight();
+                               newCalories.getTime();
+                               newCalories.getHeartRate();
+                               caloriesBurned = newCalories.calculateCals();
+                               break;
+
+                           case 3:
+                               System.out.println("Back");
+                               break;
+
+                           default:
+                               System.out.println("Error");
+                               break;
+                       }
+                   }
                     break;
+
                 // exit
                 case 4:
                     System.out.println("Good Bye!");
