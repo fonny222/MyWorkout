@@ -121,7 +121,7 @@ public class Menus {
                     }
                     break;
 
-                // this is for the workout menu when I create that class
+                // This is for the workout menu
                 case 2:
                     while (workoutMenuChoice != 3) {
                         displayWorkoutMenu();
@@ -131,9 +131,16 @@ public class Menus {
                         switch (workoutMenuChoice) {
                             case 1:
                                 // this displays the name of the workout and the exercises
-                                System.out.println("Workout Name: " + newWorkout.workoutNames.get(0));
-                                newWorkout.displayDaysofWeek();
+
+                                try {
+                                    System.out.println("Workout Name: " + newWorkout.workoutNames.get(0));
+                                    newWorkout.displayDaysofWeek();
+                                }
+                                catch(IndexOutOfBoundsException e){
+                                    System.out.println("There is nothing to Display");
+                                }
                                 break;
+
                             case 2:
                                 newWorkout.getWorkoutName();
                                 newWorkout.getMonday();
@@ -198,7 +205,6 @@ public class Menus {
                     System.out.println("Error!");
                     break;
             }
-
         }
     }
 }
