@@ -12,14 +12,14 @@ import com.example.exUtil.Workout.Workout;
 public class Menus {
 
     //Display exercise created
-    public static void displayExercise(String n, int s, int r,int w){
+    public static void displayExercise(String n){
 
         System.out.println();
         System.out.println();
         System.out.println("Exercise Name: "+n);
-        System.out.println("         Sets: "+s);
-        System.out.println("         Reps: "+r);
-        System.out.println("       Weight: "+w+"lbs");
+        //System.out.println("         Sets: "+s);
+        //System.out.println("         Reps: "+r);
+       // System.out.println("       Weight: "+w+"lbs");
 
     }
 
@@ -103,12 +103,13 @@ public class Menus {
                         switch (exerciseMenuChoice) {
                             case 1:
                                 name = myExercise.getName();
-                                numSet = myExercise.getSets();
+                                /*numSet = myExercise.getSets();
                                 numRep = myExercise.getReps();
                                 numWeight = myExercise.getWeight();
+                                */
                                 break;
                             case 2:
-                                displayExercise(name, numSet, numRep, numWeight);
+                                displayExercise(name);
                                 break;
                             case 3:
                                 System.out.println("Back");

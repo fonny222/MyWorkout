@@ -5,15 +5,15 @@ import java.util.Scanner;
 public class NewExercise {
 
     String exName;
-    int sets;
+   /* int sets;
     int reps;
     int weight;
-
+*/
     public NewExercise(){
-        exName = "Name Name";
-        sets = 0;
-        reps = 0;
-        weight = 0;
+        exName = "";
+       // sets = 0;
+       // reps = 0;
+       // weight = 0;
     }
 
 
@@ -31,7 +31,11 @@ public class NewExercise {
         return exerciseName;
     }
 
-    // get the sets
+
+
+
+
+   /* // get the sets
     public int getSets(){
 
         Scanner inputDevice = new Scanner(System.in);
@@ -57,5 +61,5 @@ public class NewExercise {
 
         return weight;
     }
-
+*/
 }

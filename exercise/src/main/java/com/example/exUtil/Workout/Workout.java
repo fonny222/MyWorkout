@@ -20,12 +20,34 @@ public class Workout {
     // these are the editable array lists for each day of the week
     public ArrayList workoutNames = new ArrayList();
     ArrayList monday = new ArrayList();
+    ArrayList mondaySets = new ArrayList();
+    ArrayList mondayReps = new ArrayList();
+    ArrayList mondayWeight = new ArrayList();
     ArrayList tuesday = new ArrayList();
+    ArrayList tuesdaySets = new ArrayList();
+    ArrayList tuesdayReps = new ArrayList();
+    ArrayList tuesdayWeight = new ArrayList();
     ArrayList wednesday = new ArrayList();
+    ArrayList wednesdaySets = new ArrayList();
+    ArrayList wednesdayReps = new ArrayList();
+    ArrayList wednesdayWeight = new ArrayList();
     ArrayList thursday = new ArrayList();
+    ArrayList thursdaySets = new ArrayList();
+    ArrayList thursdayReps = new ArrayList();
+    ArrayList thursdayWeight = new ArrayList();
     ArrayList friday = new ArrayList();
+    ArrayList fridaySets = new ArrayList();
+    ArrayList fridayReps = new ArrayList();
+    ArrayList fridayWeight = new ArrayList();
     ArrayList saturday = new ArrayList();
+    ArrayList saturdaySets = new ArrayList();
+    ArrayList saturdayReps = new ArrayList();
+    ArrayList saturdayWeight = new ArrayList();
     ArrayList sunday = new ArrayList();
+    ArrayList sundaySets = new ArrayList();
+    ArrayList sundayReps = new ArrayList();
+    ArrayList sundayWeight = new ArrayList();
+
 
     // these are the arrays for the different exercises
     String daysWeek[] = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
@@ -97,6 +119,9 @@ public class Workout {
     public void getMonday(){
         int exCategory;
         int exerciseChoice;
+        int setMon;
+        int repMon;
+        int weightMon;
 
         System.out.println("How many Exercises will you do on Monday: ");
         mondayNum = inputDevice.nextInt();
@@ -148,6 +173,23 @@ public class Workout {
                         break;
                 }
 
+                System.out.println();
+                System.out.print("How many Sets for "+monday.get(i)+": ");
+                setMon = inputDevice.nextInt();
+                mondaySets.add(setMon);
+                System.out.println();
+                System.out.println();
+                System.out.print("How many Reps for each Set: ");
+                repMon = inputDevice.nextInt();
+                mondayReps.add(repMon);
+                System.out.println();
+                System.out.println();
+                System.out.print("How much Weight: ");
+                weightMon = inputDevice.nextInt();
+                mondayWeight.add(weightMon);
+                System.out.println();
+
+
             }
         }
 
@@ -157,6 +199,9 @@ public class Workout {
     public void getTuesday(){
         int exCategory;
         int exerciseChoice;
+        int setTues;
+        int repTues;
+        int weightTues;
 
         System.out.println("How many Exercises will you do on Tuesday: ");
         tuesdayNum = inputDevice.nextInt();
@@ -207,6 +252,21 @@ public class Workout {
                         break;
                 }
 
+                System.out.println();
+                System.out.print("How many Sets for "+tuesday.get(i)+": ");
+                setTues = inputDevice.nextInt();
+                tuesdaySets.add(setTues);
+                System.out.println();
+                System.out.println();
+                System.out.print("How many Reps for each Set: ");
+                repTues = inputDevice.nextInt();
+                tuesdayReps.add(repTues);
+                System.out.println();
+                System.out.println();
+                System.out.print("How much Weight: ");
+                weightTues = inputDevice.nextInt();
+                tuesdayWeight.add(weightTues);
+                System.out.println();
             }
         }
 
@@ -216,6 +276,9 @@ public class Workout {
     public void getWednesday(){
         int exCategory;
         int exerciseChoice;
+        int setWeds;
+        int repWeds;
+        int weightWeds;
 
         System.out.println("How many Exercises will you do on Wednesday: ");
         wednesdayNum = inputDevice.nextInt();
@@ -266,6 +329,22 @@ public class Workout {
                         break;
                 }
 
+                System.out.println();
+                System.out.print("How many Sets for "+wednesday.get(i)+": ");
+                setWeds = inputDevice.nextInt();
+                wednesdaySets.add(setWeds);
+                System.out.println();
+                System.out.println();
+                System.out.print("How many Reps for each Set: ");
+                repWeds = inputDevice.nextInt();
+                wednesdayReps.add(repWeds);
+                System.out.println();
+                System.out.println();
+                System.out.print("How much Weight: ");
+                weightWeds = inputDevice.nextInt();
+                wednesdayWeight.add(weightWeds);
+                System.out.println();
+
             }
         }
 
@@ -275,6 +354,9 @@ public class Workout {
     public void getThursday(){
         int exCategory;
         int exerciseChoice;
+        int setThurs;
+        int repThurs;
+        int weightThurs;
 
         System.out.println("How many Exercises will you do on Thursday: ");
         thursdayNum = inputDevice.nextInt();
@@ -325,6 +407,22 @@ public class Workout {
                         break;
                 }
 
+                System.out.println();
+                System.out.print("How many Sets for "+thursday.get(i)+": ");
+                setThurs = inputDevice.nextInt();
+                thursdaySets.add(setThurs);
+                System.out.println();
+                System.out.println();
+                System.out.print("How many Reps for each Set: ");
+                repThurs = inputDevice.nextInt();
+                thursdayReps.add(repThurs);
+                System.out.println();
+                System.out.println();
+                System.out.print("How much Weight: ");
+                weightThurs = inputDevice.nextInt();
+                thursdayWeight.add(weightThurs);
+                System.out.println();
+
             }
         }
 
@@ -334,6 +432,9 @@ public class Workout {
     public void getFriday(){
         int exCategory;
         int exerciseChoice;
+        int setFri;
+        int repFri;
+        int weightFri;
 
         System.out.println("How many Exercises will you do on Friday: ");
         fridayNum = inputDevice.nextInt();
@@ -384,6 +485,21 @@ public class Workout {
                         break;
                 }
 
+                System.out.println();
+                System.out.print("How many Sets for "+friday.get(i)+": ");
+                setFri = inputDevice.nextInt();
+                fridaySets.add(setFri);
+                System.out.println();
+                System.out.println();
+                System.out.print("How many Reps for each Set: ");
+                repFri = inputDevice.nextInt();
+                fridayReps.add(repFri);
+                System.out.println();
+                System.out.println();
+                System.out.print("How much Weight: ");
+                weightFri = inputDevice.nextInt();
+                fridayWeight.add(weightFri);
+                System.out.println();
             }
         }
 
@@ -393,6 +509,9 @@ public class Workout {
     public void getSaturday(){
         int exCategory;
         int exerciseChoice;
+        int setSat;
+        int repSat;
+        int weightSat;
 
         System.out.println("How many Exercises will you do on Saturday: ");
         saturdayNum = inputDevice.nextInt();
@@ -443,6 +562,22 @@ public class Workout {
                         break;
                 }
 
+                System.out.println();
+                System.out.print("How many Sets for "+monday.get(i)+": ");
+                setSat = inputDevice.nextInt();
+                saturdaySets.add(setSat);
+                System.out.println();
+                System.out.println();
+                System.out.print("How many Reps for each Set: ");
+                repSat = inputDevice.nextInt();
+                saturdayReps.add(repSat);
+                System.out.println();
+                System.out.println();
+                System.out.print("How much Weight: ");
+                weightSat = inputDevice.nextInt();
+                saturdayWeight.add(weightSat);
+                System.out.println();
+
             }
         }
 
@@ -452,6 +587,10 @@ public class Workout {
     public void getSunday(){
         int exCategory;
         int exerciseChoice;
+        int setSun;
+        int repSun;
+        int weightSun;
+
 
         System.out.println("How many Exercises will you do on Sunday: ");
         sundayNum = inputDevice.nextInt();
@@ -502,6 +641,22 @@ public class Workout {
                         break;
                 }
 
+                System.out.println();
+                System.out.print("How many Sets for "+monday.get(i)+": ");
+                setSun = inputDevice.nextInt();
+                sundaySets.add(setSun);
+                System.out.println();
+                System.out.println();
+                System.out.print("How many Reps for each Set: ");
+                repSun = inputDevice.nextInt();
+                sundayReps.add(repSun);
+                System.out.println();
+                System.out.println();
+                System.out.print("How much Weight: ");
+                weightSun = inputDevice.nextInt();
+                sundayWeight.add(weightSun);
+                System.out.println();
+
             }
         }
 
@@ -515,6 +670,10 @@ public class Workout {
         System.out.println();
         for(int i = 0; i < mondayNum; i++){
             System.out.println("    "+monday.get(i));
+            System.out.println("    Sets: "+mondaySets.get(i));
+            System.out.println("    Reps: "+mondayReps.get(i));
+            System.out.println("  Weight: "+mondayWeight.get(i));
+            System.out.println();
         }
 
         System.out.println();
@@ -522,6 +681,10 @@ public class Workout {
         System.out.println();
         for(int i = 0; i < tuesdayNum; i++){
             System.out.println("    "+tuesday.get(i));
+            System.out.println("    Sets: "+tuesdaySets.get(i));
+            System.out.println("    Reps: "+tuesdayReps.get(i));
+            System.out.println("  Weight: "+tuesdayWeight.get(i));
+            System.out.println();
         }
 
         System.out.println();
@@ -529,6 +692,10 @@ public class Workout {
         System.out.println();
         for(int i = 0; i < wednesdayNum; i++){
             System.out.println("    "+wednesday.get(i));
+            System.out.println("    Sets: "+wednesdaySets.get(i));
+            System.out.println("    Reps: "+wednesdayReps.get(i));
+            System.out.println("  Weight: "+wednesdayWeight.get(i));
+            System.out.println();
         }
 
         System.out.println();
@@ -536,6 +703,10 @@ public class Workout {
         System.out.println();
         for(int i = 0; i < thursdayNum; i++){
             System.out.println("    "+thursday.get(i));
+            System.out.println("    Sets: "+thursdaySets.get(i));
+            System.out.println("    Reps: "+thursdayReps.get(i));
+            System.out.println("  Weight: "+thursdayWeight.get(i));
+            System.out.println();
         }
 
 
@@ -544,6 +715,10 @@ public class Workout {
         System.out.println();
         for(int i = 0; i < fridayNum; i++){
             System.out.println("    "+friday.get(i));
+            System.out.println("    Sets: "+fridaySets.get(i));
+            System.out.println("    Reps: "+fridayReps.get(i));
+            System.out.println("  Weight: "+fridayWeight.get(i));
+            System.out.println();
         }
 
 
@@ -552,6 +727,10 @@ public class Workout {
         System.out.println();
         for(int i = 0; i < saturdayNum; i++){
             System.out.println("    "+saturday.get(i));
+            System.out.println("    Sets: "+saturdaySets.get(i));
+            System.out.println("    Reps: "+saturdayReps.get(i));
+            System.out.println("  Weight: "+saturdayWeight.get(i));
+            System.out.println();
         }
 
 
@@ -560,6 +739,10 @@ public class Workout {
         System.out.println();
         for(int i = 0; i < sundayNum; i++){
             System.out.println("    "+sunday.get(i));
+            System.out.println("    Sets: "+sundaySets.get(i));
+            System.out.println("    Reps: "+sundayReps.get(i));
+            System.out.println("  Weight: "+sundayWeight.get(i));
+            System.out.println();
         }
 
     }
