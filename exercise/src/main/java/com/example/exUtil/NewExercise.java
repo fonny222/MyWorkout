@@ -24,12 +24,38 @@ public class NewExercise {
 
         //Prompt for input
         System.out.println("Please enter the Exerecise Name");
-
+        System.out.print("Your Choice: ");
         // use nextLine so that it doesn't stop at the spaces
         exerciseName = inputDevice.nextLine();
+        System.out.println();
 
         return exerciseName;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

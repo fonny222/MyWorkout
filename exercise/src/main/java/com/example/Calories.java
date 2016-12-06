@@ -35,6 +35,7 @@ public class Calories {
         Scanner inputDevice = new Scanner(System.in);
 
         System.out.println("Are You Male or Female?");
+        System.out.println();
         System.out.print("Answer: ");
         gender = inputDevice.next();
 
@@ -42,6 +43,7 @@ public class Calories {
         while (gender.compareToIgnoreCase("Male") != 0 && gender.compareToIgnoreCase("Female") != 0) {
             System.out.println("Please Enter a valid Answer!");
             System.out.println("Are you Male or Female?");
+            System.out.println();
             System.out.print("Answer: ");
             gender = inputDevice.next();
         }
@@ -61,9 +63,15 @@ public class Calories {
 
         System.out.println();
         System.out.println("Please Enter your Age: ");
+        System.out.println();
         System.out.print("Answer: ");
         System.out.println();
 
+        // input check
+        while(!inputDevice.hasNextDouble()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
         age = inputDevice.nextDouble();
     }
 
@@ -72,9 +80,15 @@ public class Calories {
 
         System.out.println();
         System.out.println("Please Enter your Weight: ");
+        System.out.println();
         System.out.print("Answer: ");
         System.out.println();
 
+        // input check
+        while(!inputDevice.hasNextDouble()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
         weight = inputDevice.nextDouble();
     }
 
@@ -84,9 +98,15 @@ public class Calories {
         System.out.println();
         System.out.println("Please Enter your Heart Rate: ");
         System.out.println("    (Beats Per-Minute)");
+        System.out.println();
         System.out.print("Answer: ");
         System.out.println();
 
+        // input check
+        while(!inputDevice.hasNextDouble()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
         heartRate = inputDevice.nextDouble();
     }
 
@@ -96,8 +116,15 @@ public class Calories {
         System.out.println();
         System.out.println("Please Enter The Amount of Time you Exercised: ");
         System.out.println("             (in Minutes)");
+        System.out.println();
         System.out.print("Answer: ");
         System.out.println();
+
+        // input check
+        while(!inputDevice.hasNextDouble()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
         time = inputDevice.nextDouble();
 
     }

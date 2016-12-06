@@ -77,9 +77,14 @@ public class Workout {
         String workoutName;
 
         System.out.println("Please Enter a Name for your Workout: ");
+       System.out.println();
+        System.out.print("Your Answer: ");
         workoutName = inputDevice.nextLine();
 
         workoutNames.add(workoutName);
+        System.out.println();
+        System.out.println();
+
     }
 
 
@@ -124,7 +129,17 @@ public class Workout {
         int weightMon;
 
         System.out.println("How many Exercises will you do on Monday: ");
+        System.out.println();
+        System.out.print("Answer: ");
+        // input check
+        while(!inputDevice.hasNextInt()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
+
         mondayNum = inputDevice.nextInt();
+        System.out.println();
+        System.out.println();
 
         // if you do not have any workouts that day it is a rest day
         if(mondayNum == 0){
@@ -144,13 +159,33 @@ public class Workout {
                 System.out.println("4: Legs");
                 System.out.println("5: Shoulders");
                 System.out.println();
+
+                System.out.print("Your Choice: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exCategory = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
 
                 System.out.println("Please choose One: ");
                 // this displays the chosen category
                 displayExercises(exCategory);
+                System.out.println();
+                System.out.print("Your Choice: ");
 
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exerciseChoice = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
 
                 switch(exCategory){
                     case 1:
@@ -174,22 +209,58 @@ public class Workout {
                 }
 
                 System.out.println();
-                System.out.print("How many Sets for "+monday.get(i)+": ");
+                System.out.println("How many Sets for "+monday.get(i)+": ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 setMon = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
                 mondaySets.add(setMon);
+
                 System.out.println();
                 System.out.println();
-                System.out.print("How many Reps for each Set: ");
+
+                System.out.println("How many Reps for each Set: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 repMon = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
                 mondayReps.add(repMon);
+
                 System.out.println();
                 System.out.println();
-                System.out.print("How much Weight: ");
+
+                System.out.println("How much Weight: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input checking
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 weightMon = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
+
                 mondayWeight.add(weightMon);
                 System.out.println();
-
-
             }
         }
 
@@ -204,7 +275,17 @@ public class Workout {
         int weightTues;
 
         System.out.println("How many Exercises will you do on Tuesday: ");
+        System.out.println();
+        System.out.print("Answer: ");
+
+        // input check
+        while(!inputDevice.hasNextInt()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
         tuesdayNum = inputDevice.nextInt();
+        System.out.println();
+        System.out.println();
 
         // if you do not have any workouts that day it is a rest day
         if(tuesdayNum == 0){
@@ -223,13 +304,32 @@ public class Workout {
                 System.out.println("4: Legs");
                 System.out.println("5: Shoulders");
                 System.out.println();
+                System.out.print("Your Choice: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exCategory = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
 
                 System.out.println("Please choose One: ");
                 // this displays the chosen category
                 displayExercises(exCategory);
+                System.out.println();
+                System.out.print("Your Choice: ");
 
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exerciseChoice = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
 
                 switch(exCategory){
                     case 1:
@@ -253,18 +353,57 @@ public class Workout {
                 }
 
                 System.out.println();
-                System.out.print("How many Sets for "+tuesday.get(i)+": ");
+                System.out.println("How many Sets for "+tuesday.get(i)+": ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 setTues = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
+
+
                 tuesdaySets.add(setTues);
+
                 System.out.println();
                 System.out.println();
-                System.out.print("How many Reps for each Set: ");
+
+                System.out.println("How many Reps for each Set: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 repTues = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
+
                 tuesdayReps.add(repTues);
+
                 System.out.println();
                 System.out.println();
-                System.out.print("How much Weight: ");
+                System.out.println("How much Weight: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 weightTues = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
                 tuesdayWeight.add(weightTues);
                 System.out.println();
             }
@@ -281,7 +420,17 @@ public class Workout {
         int weightWeds;
 
         System.out.println("How many Exercises will you do on Wednesday: ");
+        System.out.println();
+        System.out.print("Answer: ");
+
+        // input check
+        while(!inputDevice.hasNextInt()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
         wednesdayNum = inputDevice.nextInt();
+        System.out.println();
+        System.out.println();
 
         // if you do not have any workouts that day it is a rest day
         if(wednesdayNum == 0){
@@ -300,13 +449,33 @@ public class Workout {
                 System.out.println("4: Legs");
                 System.out.println("5: Shoulders");
                 System.out.println();
+
+                System.out.print("Your Choice: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exCategory = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
 
                 System.out.println("Please choose One: ");
                 // this displays the chosen category
                 displayExercises(exCategory);
+                System.out.print("Your Choice: ");
 
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exerciseChoice = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
 
                 switch(exCategory){
                     case 1:
@@ -330,24 +499,57 @@ public class Workout {
                 }
 
                 System.out.println();
-                System.out.print("How many Sets for "+wednesday.get(i)+": ");
+                System.out.println("How many Sets for "+wednesday.get(i)+": ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 setWeds = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
                 wednesdaySets.add(setWeds);
                 System.out.println();
                 System.out.println();
-                System.out.print("How many Reps for each Set: ");
+
+                System.out.println("How many Reps for each Set: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 repWeds = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
                 wednesdayReps.add(repWeds);
                 System.out.println();
                 System.out.println();
-                System.out.print("How much Weight: ");
+
+                System.out.println("How much Weight: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 weightWeds = inputDevice.nextInt();
-                wednesdayWeight.add(weightWeds);
+                System.out.println();
                 System.out.println();
 
+                wednesdayWeight.add(weightWeds);
+                System.out.println();
             }
         }
-
     }
 
     // thursday exercises
@@ -359,7 +561,18 @@ public class Workout {
         int weightThurs;
 
         System.out.println("How many Exercises will you do on Thursday: ");
+        System.out.println();
+        System.out.print("Answer: ");
+
+        // input check
+        while(!inputDevice.hasNextInt()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
         thursdayNum = inputDevice.nextInt();
+
+        System.out.println();
+        System.out.println();
 
         // if you do not have any workouts that day it is a rest day
         if(thursdayNum == 0){
@@ -378,13 +591,32 @@ public class Workout {
                 System.out.println("4: Legs");
                 System.out.println("5: Shoulders");
                 System.out.println();
+
+                System.out.print("Your Choice: ");
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exCategory = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
 
                 System.out.println("Please choose One: ");
                 // this displays the chosen category
                 displayExercises(exCategory);
+                System.out.println();
+                System.out.print("Your Choice: ");
 
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exerciseChoice = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
 
                 switch(exCategory){
                     case 1:
@@ -408,24 +640,61 @@ public class Workout {
                 }
 
                 System.out.println();
-                System.out.print("How many Sets for "+thursday.get(i)+": ");
+                System.out.println("How many Sets for "+thursday.get(i)+": ");
+                System.out.println();
+                System.out.print("Your Choice: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 setThurs = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
+
                 thursdaySets.add(setThurs);
                 System.out.println();
                 System.out.println();
-                System.out.print("How many Reps for each Set: ");
+
+                System.out.println("How many Reps for each Set: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 repThurs = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
+
                 thursdayReps.add(repThurs);
                 System.out.println();
                 System.out.println();
-                System.out.print("How much Weight: ");
+
+                System.out.println("How much Weight: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 weightThurs = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
+
                 thursdayWeight.add(weightThurs);
                 System.out.println();
 
             }
         }
-
     }
 
     // friday exercises
@@ -437,7 +706,18 @@ public class Workout {
         int weightFri;
 
         System.out.println("How many Exercises will you do on Friday: ");
+        System.out.println();
+        System.out.print("Answer: ");
+
+        // input check
+        while(!inputDevice.hasNextInt()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
         fridayNum = inputDevice.nextInt();
+        System.out.println();
+        System.out.println();
+
 
         // if you do not have any workouts that day it is a rest day
         if(fridayNum == 0){
@@ -456,13 +736,32 @@ public class Workout {
                 System.out.println("4: Legs");
                 System.out.println("5: Shoulders");
                 System.out.println();
+                System.out.print("Your Choice: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exCategory = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
 
                 System.out.println("Please choose One: ");
                 // this displays the chosen category
                 displayExercises(exCategory);
+                System.out.println();
+                System.out.print("Your Choice: ");
 
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exerciseChoice = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
 
                 switch(exCategory){
                     case 1:
@@ -486,23 +785,60 @@ public class Workout {
                 }
 
                 System.out.println();
-                System.out.print("How many Sets for "+friday.get(i)+": ");
+                System.out.println("How many Sets for "+friday.get(i)+": ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 setFri = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
+
                 fridaySets.add(setFri);
                 System.out.println();
                 System.out.println();
-                System.out.print("How many Reps for each Set: ");
+
+                System.out.println("How many Reps for each Set: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 repFri = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
+
                 fridayReps.add(repFri);
                 System.out.println();
                 System.out.println();
-                System.out.print("How much Weight: ");
+
+                System.out.println("How much Weight: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 weightFri = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
                 fridayWeight.add(weightFri);
+                System.out.println();
                 System.out.println();
             }
         }
-
     }
 
     // saturday exercises
@@ -514,7 +850,18 @@ public class Workout {
         int weightSat;
 
         System.out.println("How many Exercises will you do on Saturday: ");
+        System.out.println();
+        System.out.print("Answer: ");
+
+        // input check
+        while(!inputDevice.hasNextInt()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
         saturdayNum = inputDevice.nextInt();
+        System.out.println();
+        System.out.println();
+
 
         // if you do not have any workouts that day it is a rest day
         if(saturdayNum == 0){
@@ -533,13 +880,32 @@ public class Workout {
                 System.out.println("4: Legs");
                 System.out.println("5: Shoulders");
                 System.out.println();
+                System.out.print("Your Choice: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exCategory = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
 
                 System.out.println("Please choose One: ");
                 // this displays the chosen category
                 displayExercises(exCategory);
+                System.out.println();
+                System.out.print("Your Choice: ");
 
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exerciseChoice = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
 
                 switch(exCategory){
                     case 1:
@@ -563,19 +929,56 @@ public class Workout {
                 }
 
                 System.out.println();
-                System.out.print("How many Sets for "+monday.get(i)+": ");
+                System.out.println("How many Sets for "+monday.get(i)+": ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 setSat = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
+
                 saturdaySets.add(setSat);
                 System.out.println();
                 System.out.println();
-                System.out.print("How many Reps for each Set: ");
+
+                System.out.println("How many Reps for each Set: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 repSat = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
                 saturdayReps.add(repSat);
                 System.out.println();
                 System.out.println();
-                System.out.print("How much Weight: ");
+
+                System.out.println("How much Weight: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 weightSat = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
+
                 saturdayWeight.add(weightSat);
+                System.out.println();
                 System.out.println();
 
             }
@@ -593,7 +996,18 @@ public class Workout {
 
 
         System.out.println("How many Exercises will you do on Sunday: ");
+        System.out.println();
+        System.out.print("Answer: ");
+
+        // input check
+        while(!inputDevice.hasNextInt()) {
+            System.out.println("Please Enter a Valid Number!");
+            inputDevice.nextLine();
+        }
         sundayNum = inputDevice.nextInt();
+
+        System.out.println();
+        System.out.println();
 
         // if you do not have any workouts that day it is a rest day
         if(sundayNum == 0){
@@ -612,13 +1026,32 @@ public class Workout {
                 System.out.println("4: Legs");
                 System.out.println("5: Shoulders");
                 System.out.println();
+                System.out.print("Your Choice: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exCategory = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
 
                 System.out.println("Please choose One: ");
                 // this displays the chosen category
                 displayExercises(exCategory);
+                System.out.println();
+                System.out.print("Your Choice: ");
 
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 exerciseChoice = inputDevice.nextInt();
+                System.out.println();
+                System.out.println();
 
                 switch(exCategory){
                     case 1:
@@ -642,24 +1075,61 @@ public class Workout {
                 }
 
                 System.out.println();
-                System.out.print("How many Sets for "+monday.get(i)+": ");
+                System.out.println("How many Sets for "+monday.get(i)+": ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 setSun = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
+
                 sundaySets.add(setSun);
                 System.out.println();
                 System.out.println();
-                System.out.print("How many Reps for each Set: ");
+
+                System.out.println("How many Reps for each Set: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 repSun = inputDevice.nextInt();
+
+                System.out.println();
+                System.out.println();
+
                 sundayReps.add(repSun);
                 System.out.println();
                 System.out.println();
-                System.out.print("How much Weight: ");
+
+                System.out.println("How much Weight: ");
+                System.out.println();
+                System.out.print("Answer: ");
+
+                // input check
+                while(!inputDevice.hasNextInt()) {
+                    System.out.println("Please Enter a Valid Number!");
+                    inputDevice.nextLine();
+                }
                 weightSun = inputDevice.nextInt();
-                sundayWeight.add(weightSun);
+
+                System.out.println();
                 System.out.println();
 
+                sundayWeight.add(weightSun);
+                System.out.println();
+                System.out.println();
             }
         }
-
     }
 
     // test display!
@@ -744,8 +1214,5 @@ public class Workout {
             System.out.println("  Weight: "+sundayWeight.get(i));
             System.out.println();
         }
-
     }
-
-
 }

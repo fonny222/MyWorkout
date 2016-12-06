@@ -5,12 +5,12 @@ package com.example;
  * This is the main menu system for the app
  */
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import com.example.exUtil.NewExercise;
 import com.example.exUtil.Workout.Workout;
 
 public class Menus {
-
     //Display exercise created
     public static void displayExercise(String n){
 
@@ -60,10 +60,11 @@ public class Menus {
     public static void displayCaloriesMenu() {
         System.out.println();
         System.out.println("Please Choose One of the Following:");
-        System.out.println("1: View Workout");
+        System.out.println("1: View Profile");
         System.out.println("2: Create Profile");
         System.out.println("3: Back");
         System.out.println();
+
     }
 
     //Runs all the exercises
@@ -90,14 +91,27 @@ public class Menus {
         while (topMenuChoice != 4) {
             displayTopMenu();
             int exerciseMenuChoice = 0;
+            System.out.print("Your Choice: ");
+
+            while (!inputDevice.hasNextInt()){
+                System.out.println("Please Enter a Valid Number!");
+                inputDevice.nextLine();
+            }
             topMenuChoice = inputDevice.nextInt();
+
 
             //switch statement for menu system
             switch (topMenuChoice) {
+
                 case 1:
                     // designing an exercise
                     while (exerciseMenuChoice != 3) {
                         displayExerciseMenu();
+
+                        while(!inputDevice.hasNextInt()) {
+                           System.out.println("Please Enter a Valid Number!");
+                            inputDevice.nextLine();
+                        }
                         exerciseMenuChoice = inputDevice.nextInt();
 
                         switch (exerciseMenuChoice) {
@@ -115,19 +129,30 @@ public class Menus {
                                 System.out.println("Back");
                                 break;
                             default:
-                                System.out.println("Please enter a valid number!");
+                                System.err.println("Please enter a valid number!");
                                 break;
                         }
-
                     }
                     break;
+
 
                 // This is for the workout menu
                 case 2:
                     while (workoutMenuChoice != 3) {
                         displayWorkoutMenu();
+                        System.out.print("Your Choice: ");
+
+                        // hasNextInt() checks to see if the next line is an int
+                        // if it is it returns true. if not it goes into a loop
+                        while(!inputDevice.hasNextInt()) {
+                            System.out.println("Please Enter a Valid Number!");
+                            inputDevice.nextLine();
+                        }
                         workoutMenuChoice = inputDevice.nextInt();
-                        // remember to check input
+                        System.out.println();
+                        System.out.println();
+
+
 
                         switch (workoutMenuChoice) {
                             case 1:
@@ -138,7 +163,7 @@ public class Menus {
                                     newWorkout.displayDaysofWeek();
                                 }
                                 catch(IndexOutOfBoundsException e){
-                                    System.out.println("There is nothing to Display");
+                                    System.out.println("There are no Workout Routines to Display!");
                                 }
                                 break;
 
@@ -168,6 +193,8 @@ public class Menus {
                     double caloriesBurned = 0;
                     while (calChoice != 3) {
                         displayCaloriesMenu();
+
+                        System.out.print("Your Choice: ");
                         calChoice = inputDevice.nextInt();
 
 
